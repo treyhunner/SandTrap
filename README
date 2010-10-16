@@ -1,0 +1,8 @@
+This project is for a PHP script that will add any IP address that accesses it
+to a blacklist file.  This blacklist file can then be accessed by any other
+script on the server to determine which IPs should be delivered false content.
+
+Intended requirements for using this script:
+- access to execute PHP
+- access to read and write files from within PHP
+- robots.txt file access
