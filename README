@@ -6,3 +6,9 @@ Intended requirements for using this script:
 - access to execute PHP
 - access to read and write files from within PHP
 - robots.txt file access
+
+Installation:
+  1. Copy sandtrap.php, banip.php, and blacklist.txt to the same directory on
+     your server (this directory must be accessible by direct HTTP access)
+  2. Modify robots.txt to disallow traffic pointing to the location of banip.php
+  3. Upload robots.txt to the root of your website heirarchy
