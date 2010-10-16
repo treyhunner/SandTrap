@@ -12,3 +12,6 @@ Installation:
      your server (this directory must be accessible by direct HTTP access)
   2. Modify robots.txt to disallow traffic pointing to the location of banip.php
   3. Upload robots.txt to the root of your website heirarchy
+  4. Add the following code to the top of all PHP files that you want to be
+     blocked (modify sandtrap.php to point to the correct location):
+        require_once("sandtrap.php");
