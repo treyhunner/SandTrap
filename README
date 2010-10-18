@@ -8,10 +8,18 @@ Intended requirements for using this script:
 - robots.txt file access
 
 Installation:
-  1. Copy sandtrap.php, banip.php, and blacklist.txt to the same directory on
-     your server (this directory must be accessible by direct HTTP access)
-  2. Modify robots.txt to disallow traffic pointing to the location of banip.php
-  3. Upload robots.txt to the root of your website heirarchy
+  1. Copy the sandtrap directory and banip.php to the root directory for your
+     domain
+
+  2. If you already have a robots.txt file the root directory for your domain,
+     modify it to include the rules in the inccluded robots.txt file. Otherwise
+     copy the included robots.txt file to the root directory for your domain.
+
   4. Add the following code to the top of all PHP files that you want to be
-     blocked (modify sandtrap.php to point to the correct location):
-        require_once("sandtrap.php");
+     blocked (modify this code to point to the correct path for sandtrap.php):
+        require_once("sandtrap/sandtrap.php");
+
+  5. To increase the likelihood of malicious robots finding the banip.php file
+     and accessing it, add the following HTML snippet near the top of your PHP
+     pages:
+        <a href="/banip.php" style="display: none;">Click to ban your IP</a>

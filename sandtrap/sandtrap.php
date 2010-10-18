@@ -1,7 +1,7 @@
 <?php
     define( "SANDTRAP_ENABLE_LOGGING", true );
-    define( "SANDTRAP_LOG_FILE", "sandtrap_log.txt" );
-    define( "SANDTRAP_BLACKLIST", "blacklist.txt" );
+    define( "SANDTRAP_LOG_FILE", dirname( __FILE__ ) . "/sandtrap_log.txt" );
+    define( "SANDTRAP_BLACKLIST", dirname( __FILE__ ) . "/blacklist.txt" );
 
     function check_ip() {
         $blacklist = file( SANDTRAP_BLACKLIST, ( FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES ) );
